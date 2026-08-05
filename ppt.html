@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Piedra Papel o Tijera | Huella Azul</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🐾 Huella Azul
+</div>
+
+<nav>
+
+<a href="index.html">Inicio</a>
+
+<a href="index.html#acerca">Acerca de</a>
+
+<a href="index.html#ayuda">Ayuda</a>
+
+</nav>
+
+</header>
+
+<section class="ppt">
+
+<h1>✊ Piedra, Papel o Tijera</h1>
+
+<h2>Elige una opción</h2>
+
+<div class="opciones">
+
+<button class="opcion" onclick="jugar('Piedra')">🪨 Piedra</button>
+
+<button class="opcion" onclick="jugar('Papel')">📄 Papel</button>
+
+<button class="opcion" onclick="jugar('Tijera')">✂️ Tijera</button>
+
+</div>
+
+<h2 id="usuario"></h2>
+
+<h2 id="pc"></h2>
+
+<h1 id="resultado"></h1>
+
+<div class="marcador">
+
+<p>Jugador:
+<span id="puntosJugador">0</span></p>
+
+<p>Computadora:
+<span id="puntosPC">0</span></p>
+
+</div>
+
+<button id="reiniciarPPT">
+Reiniciar Marcador
+</button>
+
+</section>
+
+<script src="ppt.js"></script>
+
+</body>
+
+</html>
