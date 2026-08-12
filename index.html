@@ -200,3 +200,189 @@ botón para reiniciar la partida cuando sea necesario.
 
 </body>
 </html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huella Azul | Juegos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/7d2f7d9d4d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🐾 <span>Huella Azul</span>
+    </div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#acerca">Acerca de</a>
+        <a href="#ayuda">Ayuda</a>
+        
+        <!-- Botón para abrir el Modal / Mostrar usuario -->
+        <div id="user-area">
+            <button id="btn-open-login" class="btn-login-nav">
+                <i class="fa-solid fa-user"></i> Iniciar Sesión
+            </button>
+        </div>
+    </nav>
+
+</header>
+
+<section id="inicio" class="hero">
+
+    <h1>Bienvenido a Huella Azul</h1>
+
+    <p>
+        Disfruta de nuestros cuatro juegos interactivos desarrollados con HTML,
+        CSS y JavaScript.
+    </p>
+
+</section>
+
+<section class="juegos">
+
+    <div class="card">
+        <div class="icono">🎮</div>
+        <h2>Triqui</h2>
+        <p>Demuestra tu estrategia enfrentándote a otro jugador.</p>
+        <button onclick="location.href='triqui.html'">Jugar</button>
+    </div>
+
+    <div class="card">
+        <div class="icono">🎯</div>
+        <h2>Ahorcado</h2>
+        <p>Adivina la palabra antes de que sea demasiado tarde.</p>
+        <button onclick="location.href='ahorcado.html'">Jugar</button>
+    </div>
+
+    <div class="card">
+        <div class="icono">✊</div>
+        <h2>Piedra Papel o Tijera</h2>
+        <p>Enfréntate a la computadora y demuestra quién gana.</p>
+        <button onclick="location.href='ppt.html'">Jugar</button>
+    </div>
+
+    <div class="card">
+        <div class="icono">🧠</div>
+        <h2>Memoria</h2>
+        <p>Encuentra todas las parejas con el menor número de movimientos.</p>
+        <button onclick="location.href='memoria.html'">Jugar</button>
+    </div>
+
+</section>
+
+<section id="acerca">
+
+    <h2>Acerca de Nosotros</h2>
+
+    <p class="texto">
+        Huella Azul es un equipo comprometido con el aprendizaje y el desarrollo de
+        aplicaciones web interactivas. Nuestro objetivo es crear experiencias
+        entretenidas utilizando HTML, CSS y JavaScript, fortaleciendo el trabajo en
+        equipo, la creatividad y la resolución de problemas.
+    </p>
+
+    <div class="integrantes">
+        <div>
+            <h3>Yaneidis Durán Torres</h3>
+            <p>Líder</p>
+        </div>
+        <div>
+            <h3>Bianca Velandia Romero</h3>
+            <p>Tester / Documentadora</p>
+        </div>
+        <div>
+            <h3>Abraham Ríos Hoyos</h3>
+            <p>Desarrollador HTML / CSS</p>
+        </div>
+        <div>
+            <h3>Dulce Álvarez</h3>
+            <p>Desarrolladora JavaScript</p>
+        </div>
+        <div>
+            <h3>Ana Sofía Rada</h3>
+            <p>Desarrolladora HTML / CSS</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="ayuda">
+
+    <h2>Ayuda</h2>
+
+    <p>
+        Selecciona el juego que deseas desde el menú principal haciendo clic en
+        <strong>Jugar</strong>. Cada juego cuenta con sus propias instrucciones y un
+        botón para reiniciar la partida cuando sea necesario.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2026 Huella Azul - Todos los derechos reservados.</p>
+</footer>
+
+<!-- ==========================================
+     VENTANA MODAL DE INICIO DE SESIÓN Y REGISTRO
+     ========================================== -->
+<div id="modal-auth" class="modal">
+    <div class="modal-content">
+        <span id="btn-close-modal" class="close-modal">&times;</span>
+        
+        <!-- Pestañas para alternar entre Login y Registro -->
+        <div class="auth-tabs">
+            <button id="tab-login" class="tab-btn active">Iniciar Sesión</button>
+            <button id="tab-register" class="tab-btn">Registrarse</button>
+        </div>
+
+        <!-- Formulario de Login -->
+        <form id="form-login" class="auth-form active">
+            <h2>¡Hola de nuevo! 🐾</h2>
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="login-user" placeholder="Usuario" required>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="login-pass" placeholder="Contraseña" required>
+            </div>
+            <p id="error-login" class="msg-error"></p>
+            <button type="submit" class="btn-submit">Ingresar</button>
+        </form>
+
+        <!-- Formulario de Registro -->
+        <form id="form-register" class="auth-form">
+            <h2>Crear Cuenta 🐾</h2>
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="reg-user" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="reg-email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="reg-pass" placeholder="Contraseña" required>
+            </div>
+            <p id="msg-register" class="msg-status"></p>
+            <button type="submit" class="btn-submit">Registrarme</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
