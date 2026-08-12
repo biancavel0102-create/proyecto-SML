@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    alert("¡Bienvenido a Huella Azul! 🐾");
-});
-document.addEventListener("DOMContentLoaded", () => {
     // 1. Mensaje de bienvenida inicial (se mantiene tu código original)
     alert("¡Bienvenido a Huella Azul! 🐾");
 
